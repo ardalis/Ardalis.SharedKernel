@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <PackageVersion Include="Ardalis.Specification" Version="7.0.0" />
+    <PackageVersion Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+</Project>
