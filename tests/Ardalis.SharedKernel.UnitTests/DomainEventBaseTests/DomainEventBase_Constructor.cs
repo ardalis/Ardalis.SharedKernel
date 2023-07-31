@@ -5,7 +5,6 @@ namespace Ardalis.SharedKernel.UnitTests.DomainEventBaseTests;
 
 public class DomainEventBase_Constructor
 {
-
   private class TestDomainEvent : DomainEventBase { }
 
   [Fact]
