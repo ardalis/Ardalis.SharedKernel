@@ -30,7 +30,7 @@ public class DispatchAndClearEvents
     await domainEventDispatcher.DispatchAndClearEvents(new List<EntityBase> { entity });
 
     // Assert
-    DomainEventBase mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
+    mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
     entity.DomainEvents.Should().BeEmpty();
   }
 }
