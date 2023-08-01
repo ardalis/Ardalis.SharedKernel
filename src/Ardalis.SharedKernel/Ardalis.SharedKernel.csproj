@@ -13,9 +13,9 @@
     <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <PackageReleaseNotes>
-      * Add Commands, Queries, and Handler interfaces
+      * Adding LoggingBehavior
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -24,8 +24,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" />
     <PackageReference Include="Ardalis.Specification" />
     <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>

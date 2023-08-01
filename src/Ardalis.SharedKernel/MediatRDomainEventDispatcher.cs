@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using System;
+using MediatR;
 
 namespace Ardalis.SharedKernel;
 
@@ -24,3 +25,4 @@ public class MediatRDomainEventDispatcher : IDomainEventDispatcher
     }
   }
 }
+
