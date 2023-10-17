@@ -7,9 +7,9 @@ namespace Ardalis.SharedKernel;
 /// If you prefer GUID Ids, change it here.
 /// If you need to support both GUID and int IDs, change to EntityBase&lt;TId&gt; and use TId as the type for Id.
 /// </summary>
-public abstract class EntityBase
+public abstract class EntityBase<TId>
 {
-  public int Id { get; set; }
+  public TId Id { get; set; } = default!;
 
   private List<DomainEventBase> _domainEvents = new();
   [NotMapped]

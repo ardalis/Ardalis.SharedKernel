@@ -1,16 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Ardalis.SharedKernel</AssemblyName>
-    <PackageId>Ardalis.SharedKernel</PackageId>
-    <Title>Ardalis.SharedKernel</Title>
+    <AssemblyName>Majic.SharedKernel</AssemblyName>
+    <PackageId>Majic.SharedKernel</PackageId>
+    <Title>Majic SharedKernel</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Steve Smith (@ardalis)</Authors>
-    <Company>Ardalis.com</Company>
-    <Description>An example shared kernel project/package for use with Ardalis.CleanArchitecture template. You should probably replace this with your own package!</Description>
+    <Authors>Steve Smith (@ardalis), Akpan Joseph (majicdevz@gmail.com)</Authors>
+    <Company>majicdevz.com</Company>
+    <Description>A Custom shared kernel project/package for use with Ardalis.CleanArchitecture template. </Description>
     <Summary>An example shared kernel project/package for use with Ardalis.CleanArchitecture template</Summary>
-    <PackageProjectUrl>https://github.com/ardalis/Ardalis.SharedKernel</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/majiicmajic/Majic.SharedKernel</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/majiicmajic/Majic.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <Version>1.3.0</Version>

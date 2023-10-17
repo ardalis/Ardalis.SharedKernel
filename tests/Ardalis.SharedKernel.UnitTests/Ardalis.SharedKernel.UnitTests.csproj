@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ardalis.SharedKernel\Ardalis.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\src\Ardalis.SharedKernel\Majic.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
