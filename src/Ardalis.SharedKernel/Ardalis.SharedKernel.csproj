@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <AssemblyName>Ardalis.SharedKernel</AssemblyName>
@@ -13,9 +13,9 @@
     <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.2.0</Version>
+    <Version>1.4.0</Version>
     <PackageReleaseNotes>
-      * Add Commands, Queries, and Handler interfaces
+      * Add EntityBase TID
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
