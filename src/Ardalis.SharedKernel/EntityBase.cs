@@ -15,4 +15,3 @@ public abstract class EntityBase<TId> : HasDomainEventsBase
 {
   public TId Id { get; set; }
 }
-
