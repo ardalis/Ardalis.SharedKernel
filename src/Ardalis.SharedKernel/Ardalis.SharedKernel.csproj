@@ -13,9 +13,9 @@
     <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
     <PackageReleaseNotes>
-      * Add EntityBase TID
+      * Update to Support Dispatching Events with Non-Integer IDs by @demidov-ad in https://github.com/ardalis/Ardalis.SharedKernel/pull/5
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
