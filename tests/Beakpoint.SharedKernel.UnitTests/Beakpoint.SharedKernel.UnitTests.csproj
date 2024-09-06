@@ -3,6 +3,7 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ardalis.SharedKernel\Beakpoint.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\src\Beakpoint.SharedKernel\Beakpoint.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
