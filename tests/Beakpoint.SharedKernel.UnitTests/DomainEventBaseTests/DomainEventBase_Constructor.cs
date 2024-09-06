@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using FluentAssertions;
+using Beakpoint.SharedKernel;
 
 namespace Ardalis.SharedKernel.UnitTests.DomainEventBaseTests;
 

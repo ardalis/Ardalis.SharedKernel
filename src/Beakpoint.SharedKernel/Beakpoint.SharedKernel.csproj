@@ -1,26 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Ardalis.SharedKernel</AssemblyName>
-    <PackageId>Ardalis.SharedKernel</PackageId>
-    <Title>Ardalis.SharedKernel</Title>
+    <AssemblyName>Beakpoint.SharedKernel</AssemblyName>
+    <PackageId>Beakpoint.SharedKernel</PackageId>
+    <Title>Beakpoint.SharedKernel</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Steve Smith (@ardalis)</Authors>
-    <Company>Ardalis.com</Company>
-    <Description>An example shared kernel project/package for use with Ardalis.CleanArchitecture template. You should probably replace this with your own package!</Description>
-    <Summary>An example shared kernel project/package for use with Ardalis.CleanArchitecture template</Summary>
-    <PackageProjectUrl>https://github.com/ardalis/Ardalis.SharedKernel</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
+    <Authors>Alan Cox</Authors>
+    <Company>Beakpoint Insights</Company>
+    <Description>Some useful base classes for Beakpoint Insights</Description>
+    <Summary>Some useful base classes for Beakpoint Insights</Summary>
+    <PackageProjectUrl>https://github.com/Beakpoint-Insights/Beakpoint.SharedKernel</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Beakpoint-Insights/Beakpoint.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.6.0</Version>
+    <Version>0.1.0</Version>
     <PackageReleaseNotes>
-      * Updated to latest NuGet Package Versions
+      * Unstable, in dev
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <DocumentationFile>bin\$(Configuration)\Ardalis.SharedKernel.xml</DocumentationFile>    
+    <DocumentationFile>bin\$(Configuration)\Beakpoint.SharedKernel.xml</DocumentationFile>    
   </PropertyGroup>
 
   <ItemGroup>

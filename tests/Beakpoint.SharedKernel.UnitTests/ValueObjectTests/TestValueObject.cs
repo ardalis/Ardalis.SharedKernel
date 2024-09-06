@@ -1,4 +1,6 @@
-﻿namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
+﻿using Beakpoint.SharedKernel;
+
+namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
 
 public class TestValueObject : ValueObject
   {

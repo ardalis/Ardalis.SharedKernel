@@ -5,18 +5,20 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CAF15053-4898-4232-880C-2DBFA5C70A82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ardalis.SharedKernel", "src\Ardalis.SharedKernel\Ardalis.SharedKernel.csproj", "{231F7943-1673-496B-96D3-6DB1A7604DAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beakpoint.SharedKernel", "src\Beakpoint.SharedKernel\Beakpoint.SharedKernel.csproj", "{231F7943-1673-496B-96D3-6DB1A7604DAE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7B9C7723-AC13-45ED-B5A4-0B9400BB5260}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B12F4EBB-7E78-4F86-835B-DD5A7AA9628C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ardalis.SharedKernel.UnitTests", "tests\Ardalis.SharedKernel.UnitTests\Ardalis.SharedKernel.UnitTests.csproj", "{51903321-9FFE-419B-9381-7D27EC9A2818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beakpoint.SharedKernel.UnitTests", "tests\Beakpoint.SharedKernel.UnitTests\Beakpoint.SharedKernel.UnitTests.csproj", "{51903321-9FFE-419B-9381-7D27EC9A2818}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
