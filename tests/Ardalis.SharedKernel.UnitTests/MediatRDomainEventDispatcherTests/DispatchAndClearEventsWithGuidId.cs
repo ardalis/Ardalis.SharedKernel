@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using MediatR;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using Xunit;
 
@@ -22,7 +23,7 @@ public class DispatchAndClearEventsWithGuidId
   {
     // Arrange
     var mediatorMock = new Mock<IMediator>();
-    var domainEventDispatcher = new MediatRDomainEventDispatcher(mediatorMock.Object);
+    var domainEventDispatcher = new MediatRDomainEventDispatcher(mediatorMock.Object, NullLogger<MediatRDomainEventDispatcher>.Instance);
     var entity = new TestEntity();
     entity.AddTestDomainEvent();
 
