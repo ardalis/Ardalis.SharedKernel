@@ -2,11 +2,11 @@
 
 namespace Ardalis.SharedKernel;
 
-public abstract class HasDomainEventsBase
+public abstract class HasDomainEventsBase : IHasDomainEvents
 {
-  private List<DomainEventBase> _domainEvents = new();
+  private readonly List<DomainEventBase> _domainEvents = new();
   [NotMapped]
-  public IEnumerable<DomainEventBase> DomainEvents => _domainEvents.AsReadOnly();
+  public IReadOnlyCollection<DomainEventBase> DomainEvents => _domainEvents.AsReadOnly();
 
   protected void RegisterDomainEvent(DomainEventBase domainEvent) => _domainEvents.Add(domainEvent);
   internal void ClearDomainEvents() => _domainEvents.Clear();
