@@ -37,7 +37,7 @@ public class DispatchAndClearEventsWithMixedIds
   }
 
   [Fact]
-  public async void CallsPublishAndClearDomainEventsWithStronglyTypedId()
+  public async Task CallsPublishAndClearDomainEventsWithStronglyTypedId()
   {
     // Arrange
     var mediatorMock = new Mock<IMediator>();

@@ -22,7 +22,7 @@ public class DispatchAndClearEventsWithStronglyTypedIds
   }
 
   [Fact]
-  public async void CallsPublishAndClearDomainEventsWithStronglyTypedId()
+  public async Task CallsPublishAndClearDomainEventsWithStronglyTypedId()
   {
     // Arrange
     Mock<IMediator> mediatorMock = new Mock<IMediator>();
