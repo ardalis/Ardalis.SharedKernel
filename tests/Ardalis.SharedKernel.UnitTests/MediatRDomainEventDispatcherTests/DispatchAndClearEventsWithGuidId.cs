@@ -18,7 +18,7 @@ public class DispatchAndClearEventsWithGuidId
   }
 
   [Fact]
-  public async void CallsPublishAndClearDomainEvents()
+  public async Task CallsPublishAndClearDomainEvents()
   {
     // Arrange
     var mediatorMock = new Mock<IMediator>();

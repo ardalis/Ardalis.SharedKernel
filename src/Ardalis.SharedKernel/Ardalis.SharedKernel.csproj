@@ -13,9 +13,11 @@
     <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.6.0</Version>
+    <Version>2.1.0</Version>
     <PackageReleaseNotes>
-      * Updated to latest NuGet Package Versions
+      * Updated packages
+      * Added default to TId property initializer
+      * Added another EntityBase overload to work with Vogen value objects
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
