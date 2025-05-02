@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Ardalis.Result;
+using MediatR;
 
 namespace Ardalis.SharedKernel;
 
@@ -6,6 +7,5 @@ namespace Ardalis.SharedKernel;
 /// Source: https://code-maze.com/cqrs-mediatr-fluentvalidation/
 /// </summary>
 /// <typeparam name="TResponse"></typeparam>
-public interface ICommand<out TResponse> : IRequest<TResponse>
-{
-}
+public interface ICommand<TResponse> : IRequest<Result<TResponse>>;
+public interface ICommand : ICommand<Unit>;
