@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Ardalis.Result;
+using MediatR;
 
 namespace Ardalis.SharedKernel;
 
@@ -7,7 +8,5 @@ namespace Ardalis.SharedKernel;
 /// </summary>
 /// <typeparam name="TCommand"></typeparam>
 /// <typeparam name="TResponse"></typeparam>
-public interface ICommandHandler<in TCommand, TResponse> : IRequestHandler<TCommand, TResponse>
-        where TCommand : ICommand<TResponse>
-{
-}
+public interface ICommandHandler<in TCommand, TResponse> : IRequestHandler<TCommand, Result<TResponse>>
+        where TCommand : ICommand<TResponse>;
