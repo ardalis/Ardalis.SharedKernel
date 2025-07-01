@@ -14,12 +14,12 @@ jobs:
     - name: Setup dotnet
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
     - name: Build
-      run: dotnet build Ardalis.SharedKernel.sln --configuration Release
+      run: dotnet build Ardalis.SharedKernel.slnx --configuration Release
     - name: Test
-      run: dotnet test Ardalis.SharedKernel.sln --configuration Release --no-build --no-restore
+      run: dotnet test Ardalis.SharedKernel.slnx --configuration Release --no-build --no-restore
     - name: Pack
-      run: dotnet pack Ardalis.SharedKernel.sln --configuration Release --no-build --no-restore --output .
+      run: dotnet pack Ardalis.SharedKernel.slnx --configuration Release --no-build --no-restore --output .
     - name: Push to NuGet
       run: dotnet nuget push "*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
