@@ -6,7 +6,7 @@ on:
     types: [published]
 
 env:
-  SOLUTION_FILE: NimblePros.SharedKernel.slnx
+  SOLUTION_FILE: Ardalis.SharedKernel.slnx
   PACK_OUTPUT: artifacts/package/release
 
 jobs:
