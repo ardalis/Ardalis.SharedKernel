@@ -1,14 +1,13 @@
-﻿using FluentAssertions;
-using MediatR;
+﻿using Mediator;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using Xunit;
 
 namespace Ardalis.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
 
-public class DispatchAndClearEventsWithStronglyTypedIds
+public class DispatchAndClearEventsWithStronglyTypedIds : INotificationHandler<DispatchAndClearEventsWithStronglyTypedIds.TestDomainEvent>
 {
-  private class TestDomainEvent : DomainEventBase { }
+  public class TestDomainEvent : DomainEventBase { }
 
   public readonly record struct StronglyTyped { }
 
@@ -26,8 +25,8 @@ public class DispatchAndClearEventsWithStronglyTypedIds
   {
     // Arrange
     Mock<IMediator> mediatorMock = new Mock<IMediator>();
-    MediatRDomainEventDispatcher domainEventDispatcher =
-      new(mediatorMock.Object, NullLogger<MediatRDomainEventDispatcher>.Instance);
+    MediatorDomainEventDispatcher domainEventDispatcher =
+      new(mediatorMock.Object, NullLogger<MediatorDomainEventDispatcher>.Instance);
     TestEntityStronglyTyped entity = new();
     entity.AddTestDomainEvent();
 
@@ -37,5 +36,10 @@ public class DispatchAndClearEventsWithStronglyTypedIds
     // Assert
     mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
     entity.DomainEvents.Should().BeEmpty();
+  }
+
+  public ValueTask Handle(TestDomainEvent notification, CancellationToken cancellationToken)
+  {
+    throw new NotImplementedException();
   }
 }

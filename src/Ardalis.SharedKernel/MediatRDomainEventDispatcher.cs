@@ -1,14 +1,14 @@
-﻿using MediatR;
+﻿using Mediator;
 using Microsoft.Extensions.Logging;
 
 namespace Ardalis.SharedKernel;
 
-public class MediatRDomainEventDispatcher : IDomainEventDispatcher
+public class MediatorDomainEventDispatcher : IDomainEventDispatcher
 {
   private readonly IMediator _mediator;
-  private readonly ILogger<MediatRDomainEventDispatcher> _logger;
+  private readonly ILogger<MediatorDomainEventDispatcher> _logger;
 
-  public MediatRDomainEventDispatcher(IMediator mediator, ILogger<MediatRDomainEventDispatcher> logger)
+  public MediatorDomainEventDispatcher(IMediator mediator, ILogger<MediatorDomainEventDispatcher> logger)
   {
     _mediator = mediator;
     _logger = logger;

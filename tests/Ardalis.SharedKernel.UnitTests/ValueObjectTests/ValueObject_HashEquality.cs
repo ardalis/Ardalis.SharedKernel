@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using Xunit;
-
-namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
+﻿namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
 public class ValueObject_HashEquality
 {
   [Fact]

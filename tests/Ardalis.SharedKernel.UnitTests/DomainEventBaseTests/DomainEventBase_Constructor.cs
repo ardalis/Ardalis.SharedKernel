@@ -1,11 +1,10 @@
-﻿using Xunit;
-using FluentAssertions;
+﻿using Mediator;
 
 namespace Ardalis.SharedKernel.UnitTests.DomainEventBaseTests;
 
-public class DomainEventBase_Constructor
+public class DomainEventBase_Constructor : INotificationHandler<DomainEventBase_Constructor.TestDomainEvent>
 {
-  private class TestDomainEvent : DomainEventBase { }
+  public class TestDomainEvent : DomainEventBase { }
 
   [Fact]
   public void SetsDateOccurredToCurrentDateTime()
@@ -19,5 +18,10 @@ public class DomainEventBase_Constructor
     // Assert
     domainEvent.DateOccurred.Should().BeOnOrAfter(beforeCreation);
     domainEvent.DateOccurred.Should().BeOnOrBefore(DateTime.UtcNow);
+  }
+
+  public ValueTask Handle(TestDomainEvent notification, CancellationToken cancellationToken)
+  {
+    throw new NotImplementedException();
   }
 }
