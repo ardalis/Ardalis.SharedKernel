@@ -4,7 +4,7 @@ using Moq;
 
 namespace Ardalis.SharedKernel.UnitTests.MediatorDomainEventDispatcherTests;
 
-public class DispatchAndClearEvents : INotificationHandler<DispatchAndClearEvents.TestDomainEvent>
+public class DispatchAndClearEvents : IDomainEventHandler<DispatchAndClearEvents.TestDomainEvent>
 {
   public class TestDomainEvent : DomainEventBase { }
   private class TestEntity : EntityBase
@@ -29,7 +29,7 @@ public class DispatchAndClearEvents : INotificationHandler<DispatchAndClearEvent
     await domainEventDispatcher.DispatchAndClearEvents(new List<EntityBase> { entity });
 
     // Assert
-    mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
+    mediatorMock.Verify(m => m.Publish(It.IsAny<IDomainEvent>(), It.IsAny<CancellationToken>()), Times.Once);
     entity.DomainEvents.Should().BeEmpty();
   }
 

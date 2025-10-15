@@ -20,10 +20,10 @@ public class MediatorDomainEventDispatcher : IDomainEventDispatcher
     {
       if (entity is IHasDomainEvents hasDomainEvents)
       {
-        DomainEventBase[] events = hasDomainEvents.DomainEvents.ToArray();
+        IDomainEvent[] events = hasDomainEvents.DomainEvents.ToArray();
         hasDomainEvents.ClearDomainEvents();
 
-        foreach (DomainEventBase domainEvent in events)
+        foreach (var domainEvent in events)
           await _mediator.Publish(domainEvent).ConfigureAwait(false);
       }
       else
