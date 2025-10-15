@@ -18,7 +18,7 @@ public class MediatorDomainEventDispatcher : IDomainEventDispatcher
   {
     foreach (IHasDomainEvents entity in entitiesWithEvents)
     {
-      if (entity is HasDomainEventsBase hasDomainEvents)
+      if (entity is IHasDomainEvents hasDomainEvents)
       {
         DomainEventBase[] events = hasDomainEvents.DomainEvents.ToArray();
         hasDomainEvents.ClearDomainEvents();
@@ -31,7 +31,7 @@ public class MediatorDomainEventDispatcher : IDomainEventDispatcher
         _logger.LogError(
           "Entity of type {EntityType} does not inherit from {BaseType}. Unable to clear domain events.",
           entity.GetType().Name,
-          nameof(HasDomainEventsBase));
+          nameof(IHasDomainEvents));
       }
     }
   }
