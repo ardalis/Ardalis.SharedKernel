@@ -4,6 +4,8 @@
 /// NOTE: Use `readonly record struct` for most cases in C# 10+
 /// See: https://nietras.com/2021/06/14/csharp-10-record-struct/
 /// 
+/// Alternately consider using Vogen
+/// 
 /// For this class implementation, reference:
 /// See: https://enterprisecraftsmanship.com/posts/value-object-better-implementation/
 /// </summary>

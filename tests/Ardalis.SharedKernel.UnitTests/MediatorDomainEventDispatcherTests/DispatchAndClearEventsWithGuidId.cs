@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Ardalis.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
 
-public class DispatchAndClearEventsWithGuidId : INotificationHandler<DispatchAndClearEventsWithGuidId.TestDomainEvent>
+public class DispatchAndClearEventsWithGuidId : IDomainEventHandler<DispatchAndClearEventsWithGuidId.TestDomainEvent>
 {
   public class TestDomainEvent : DomainEventBase { }
   private class TestEntity : EntityBase<Guid>
@@ -30,7 +30,7 @@ public class DispatchAndClearEventsWithGuidId : INotificationHandler<DispatchAnd
     await domainEventDispatcher.DispatchAndClearEvents(new List<EntityBase<Guid>> { entity });
 
     // Assert
-    mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
+    mediatorMock.Verify(m => m.Publish(It.IsAny<IDomainEvent>(), It.IsAny<CancellationToken>()), Times.Once);
     entity.DomainEvents.Should().BeEmpty();
   }
 
