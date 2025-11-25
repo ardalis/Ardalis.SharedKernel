@@ -1,8 +1,6 @@
-﻿using FluentAssertions;
-using Microsoft.Extensions.DependencyInjection;
-using Xunit;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Ardalis.SharedKernel.UnitTests.GuidGeneratorTest;
+namespace Acme.SharedKernel.UnitTests.GuidGeneratorTest;
 public class GenerateSequentialGuids
 {
 
@@ -29,13 +27,20 @@ public class GenerateSequentialGuids
 
     // Assert
 
-    /// To sort in the same order as as SQL Server sort by, we need to compare the last 6 bytes of the Guid.
-    var s1 = guid1.ToString().Substring(24);
-    var s2 = guid2.ToString().Substring(24);
-    var s3 = guid3.ToString().Substring(24);
+    // For GUID v7 the timestamp is the first 48 bits (12 hex chars) in the canonical hex representation.
+    // Use ToString("N") (no dashes) and parse the first 12 hex chars as an unsigned integer.
+    static ulong ExtractV7Timestamp(Guid g)
+    {
+      var hex = g.ToString("N").Substring(0, 12); // first 12 hex chars = 48 bits
+      return Convert.ToUInt64(hex, 16);
+    }
 
-    s1.CompareTo(s2).Should().BeLessThan(0);
-    s2.CompareTo(s3).Should().BeLessThan(0);
+    var t1 = ExtractV7Timestamp(guid1);
+    var t2 = ExtractV7Timestamp(guid2);
+    var t3 = ExtractV7Timestamp(guid3);
+
+    t1.Should().BeLessThan(t2);
+    t2.Should().BeLessThan(t3);
 
   }
 }

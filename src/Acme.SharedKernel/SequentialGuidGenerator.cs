@@ -1,13 +1,9 @@
-﻿using RT.Comb;
+﻿namespace Acme.SharedKernel;
 
-namespace Ardalis.SharedKernel;
-
-public class SequentialGuidGenerator(ICombProvider combProvider) : ISequentialGuidGenerator
+public class SequentialGuidGenerator() : ISequentialGuidGenerator
 {
   public Guid NewSequentialGuid()
   {
-    var sqlCombProvider = (SqlCombProvider?)combProvider;
-
-    return sqlCombProvider == null ? throw new Exception("sqlCombProvider is null") : sqlCombProvider.Create();
+    return System.Guid.CreateVersion7();
   }
 }

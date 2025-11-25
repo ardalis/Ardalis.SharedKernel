@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Ardalis.SharedKernel;
+namespace Acme.SharedKernel;
 
 /// <summary>
 /// A base class for DDD Entities. Includes support for domain events dispatched post-persistence.

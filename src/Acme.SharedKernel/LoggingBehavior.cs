@@ -4,7 +4,7 @@ using Ardalis.GuardClauses;
 using Mediator;
 using Microsoft.Extensions.Logging;
 
-namespace Ardalis.SharedKernel;
+namespace Acme.SharedKernel;
 
 /// <summary>
 /// Adds logging for all requests in Mediator pipeline.

@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SharedKernel;
+﻿namespace Acme.SharedKernel;
 
 /// <summary>
 /// Apply this marker interface to entities that should be audited

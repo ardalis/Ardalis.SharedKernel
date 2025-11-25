@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>RM.SharedKernel</AssemblyName>
-    <PackageId>RM.SharedKernel</PackageId>
-    <Title>RM.SharedKernel</Title>
+    <AssemblyName>Acme.SharedKernel</AssemblyName>
+    <PackageId>Acme.SharedKernel</PackageId>
+    <Title>Acme.SharedKernel</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Steve Smith (@ardalis), Mark Townsend</Authors>
-    <Company>Ardalis.com</Company>
-    <Description>An example shared kernel project/package for use with Ardalis.CleanArchitecture template. You should probably replace this with your own package!</Description>
+    <Authors>Rob Martin(@ozbob)</Authors>
+    <Company>ozbob.dev</Company>
+    <Description>An example shared kernel project/package for use with Ardalis.CleanArchitecture template.</Description>
     <Summary>An example shared kernel project/package for use with Ardalis.CleanArchitecture template</Summary>
-    <PackageProjectUrl>https://github.com/ardalis/Ardalis.SharedKernel</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ardalis/Ardalis.SharedKernel</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/OzBob/Acme.SharedKernel</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/OzBob/Acme.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <Version>5.0.0</Version>
     <PackageReleaseNotes>
       * Updated to net10
       * Updated dependencies
-      * Update to Support IAuditableEntity and ISoftDelete interfaces, and to create a Sequential Guid Generator.
+      * Update to Support IAuditableEntity and ISoftDelete interfaces, and to create a Sequential Guid7 Generator.
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -31,8 +31,6 @@
     <PackageReference Include="Finbuckle.MultiTenant" />
     <PackageReference Include="Mediator.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
-    <PackageReference Include="RT.Comb.AspNetCore" />
-    
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SharedKernel.UnitTests.EntityBaseTests;
+﻿namespace Acme.SharedKernel.UnitTests.EntityBaseTests;
 public class TestClass : EntityBase<RoleId>
 {
   protected TestClass() { }

@@ -1,7 +1,7 @@
 ﻿using Mediator;
 using Microsoft.Extensions.Logging;
 
-namespace Ardalis.SharedKernel;
+namespace Acme.SharedKernel;
 
 public class MediatorDomainEventDispatcher : IDomainEventDispatcher
 {

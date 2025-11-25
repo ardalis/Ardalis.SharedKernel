@@ -1,9 +1,8 @@
 ﻿using Mediator;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
-using Xunit;
 
-namespace Ardalis.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
+namespace Acme.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
 
 public class DispatchAndClearEventsWithGuidId : IDomainEventHandler<DispatchAndClearEventsWithGuidId.TestDomainEvent>
 {

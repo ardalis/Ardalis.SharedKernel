@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SharedKernel;
+﻿namespace Acme.SharedKernel;
 
 /// <summary>
 /// A simple interface for sending domain events. Can use MediatR or any other implementation.

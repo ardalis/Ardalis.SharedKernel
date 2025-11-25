@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 
-namespace Ardalis.SharedKernel.UnitTests.MediatorDomainEventDispatcherTests;
+namespace Acme.SharedKernel.UnitTests.MediatorDomainEventDispatcherTests;
 
 public class DispatchAndClearEvents : IDomainEventHandler<DispatchAndClearEvents.TestDomainEvent>
 {

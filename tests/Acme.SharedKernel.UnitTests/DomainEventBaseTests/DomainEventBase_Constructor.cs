@@ -1,6 +1,6 @@
 ﻿using Mediator;
 
-namespace Ardalis.SharedKernel.UnitTests.DomainEventBaseTests;
+namespace Acme.SharedKernel.UnitTests.DomainEventBaseTests;
 
 public class DomainEventBase_Constructor : INotificationHandler<DomainEventBase_Constructor.TestDomainEvent>
 {

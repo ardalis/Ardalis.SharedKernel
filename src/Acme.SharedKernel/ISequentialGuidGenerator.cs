@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SharedKernel;
+﻿namespace Acme.SharedKernel;
 
 /// <summary>
 /// Used to generate new sequential GUIDs for SQL Server to reduce fragmentation.

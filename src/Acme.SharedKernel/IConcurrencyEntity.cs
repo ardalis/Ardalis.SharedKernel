@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Ardalis.SharedKernel;
+namespace Acme.SharedKernel;
 
 public interface IConcurrencyEntity
 {
