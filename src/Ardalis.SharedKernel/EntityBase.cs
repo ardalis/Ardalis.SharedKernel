@@ -1,4 +1,6 @@
-﻿namespace Ardalis.SharedKernel;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Ardalis.SharedKernel;
 
 /// <summary>
 /// A base class for DDD Entities. Includes support for domain events dispatched post-persistence.
@@ -11,8 +13,9 @@ public abstract class EntityBase : HasDomainEventsBase
 }
 
 public abstract class EntityBase<TId> : HasDomainEventsBase
-  where TId : struct, IEquatable<TId>
+  where TId : notnull, IEquatable<TId>
 {
+  [NotNull]
   public TId Id { get; set; } = default!;
 }
 
@@ -25,6 +28,5 @@ public abstract class EntityBase<TId> : HasDomainEventsBase
 public abstract class EntityBase<T, TId> : HasDomainEventsBase
   where T : EntityBase<T, TId>
 {
-  public TId Id { get; set; } = default!;
 }
 

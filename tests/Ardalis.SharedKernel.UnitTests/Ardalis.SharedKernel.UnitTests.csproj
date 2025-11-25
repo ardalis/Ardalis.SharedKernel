@@ -23,7 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ardalis.SharedKernel\Ardalis.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\src\Ardalis.SharedKernel\RM.SharedKernel.csproj" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+  </PropertyGroup>
 
 </Project>
