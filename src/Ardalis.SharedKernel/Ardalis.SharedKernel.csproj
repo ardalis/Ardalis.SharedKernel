@@ -4,7 +4,6 @@
     <AssemblyName>Ardalis.SharedKernel</AssemblyName>
     <PackageId>Ardalis.SharedKernel</PackageId>
     <Title>Ardalis.SharedKernel</Title>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Steve Smith (@ardalis)</Authors>
     <Company>Ardalis.com</Company>
     <Description>An example shared kernel project/package for use with Ardalis.CleanArchitecture template. You should probably replace this with your own package!</Description>
@@ -21,7 +20,7 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <DocumentationFile>bin\$(Configuration)\Ardalis.SharedKernel.xml</DocumentationFile>    
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Ardalis.SharedKernel.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

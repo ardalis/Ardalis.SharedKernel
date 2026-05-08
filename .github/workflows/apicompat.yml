@@ -17,6 +17,6 @@ jobs:
     uses: NimblePros/NimblePros.GitHub.Workflows/.github/workflows/apicompat.yml@main
     with:
       package_id: Ardalis.SharedKernel
-      project_path: ./src/SharedKernel/SharedKernel.csproj
+      project_path: ./src/Ardalis.SharedKernel/Ardalis.SharedKernel.csproj
     secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      apicompat_token: ${{ secrets.GITHUB_TOKEN }}
