@@ -19,4 +19,4 @@ jobs:
       package_id: Ardalis.SharedKernel
       project_path: ./src/SharedKernel/SharedKernel.csproj
     secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      apicompat_token: ${{ secrets.GITHUB_TOKEN }}
