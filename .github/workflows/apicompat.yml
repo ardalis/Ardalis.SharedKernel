@@ -1,0 +1,22 @@
+name: API Compatibility
+
+# Calls the reusable API compatibility workflow from NimblePros.GitHub.Workflows.
+
+# The built-in GITHUB_TOKEN is passed as a secret so the reusable workflow can
+# post and update comments on this repo's pull requests.
+
+on:
+  pull_request:
+
+jobs:
+  apicompat:
+    # Permissions must be declared on the job when using a reusable workflow.
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: NimblePros/NimblePros.GitHub.Workflows/.github/workflows/apicompat.yml@main
+    with:
+      package_id: Ardalis.SharedKernel
+      project_path: ./src/SharedKernel/SharedKernel.csproj
+    secrets:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
